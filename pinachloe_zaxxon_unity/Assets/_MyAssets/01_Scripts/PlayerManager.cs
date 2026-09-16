@@ -4,7 +4,7 @@ public class PlayerManager : MonoBehaviour
 {
     bool isAlive;
     public float speed;
-    [SerializeField] float lateralSepeed;
+    [SerializeField] float lateralSpeed;
     InputActions inputActions;
     float MoveX;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,7 +33,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.right* Lateralspeed * Time.deltaTime);
+        transform.Translate(Vector3.right* lateralSpeed * Time.deltaTime);
 
     }
    
