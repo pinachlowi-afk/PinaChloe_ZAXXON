@@ -6,24 +6,24 @@ public class PlayerManager : MonoBehaviour
     public float speed;
     [SerializeField] float lateralSpeed;
     InputActions inputActions;
-    float MoveX;
+    float moveX;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+      
     }
     void Shoot()
     {
 
-        print("BOOOOM");
+        print("BOMBOCLAT");
             }
     private void Awake()
     {
         inputActions = new InputActions();
-       ;
+       
         inputActions.player.Shoot.started += _ => Shoot();
-        inputActions.player.MoveX.performed += ctx => MoveX = ctx.ReadValue<float>();
-        inputActions.player.MoveX.canceled += _ => MoveX = 0f;
+        inputActions.player.MoveX.performed += ctx => moveX = ctx.ReadValue<float>();
+        inputActions.player.MoveX.canceled += ctx => moveX = 0f;
 
     }
     private void OnEnable()
@@ -33,7 +33,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.right* lateralSpeed * Time.deltaTime);
+        transform.Translate(Vector3.right * lateralSpeed * moveX * Time.deltaTime);
 
     }
    

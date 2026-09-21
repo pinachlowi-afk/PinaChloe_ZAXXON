@@ -107,7 +107,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""id"": ""c35c6fc2-0b27-43e2-b782-c102c849168a"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Hold"",
                     ""initialStateCheck"": true
                 },
                 {
@@ -135,7 +135,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""544ee3dd-bf2c-4601-ba8e-35f0fa0b80d2"",
-                    ""path"": ""<Gamepad>/rightStick/x"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -146,13 +146,24 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""9cedcc52-78bc-486f-af89-0ec383c8c615"",
-                    ""path"": ""<Gamepad>/rightStick/x"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""MoveX"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""707676cd-9eb6-4ee9-a80a-cc7045599174"",
+                    ""path"": ""<Gamepad>/leftStick/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveX"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
@@ -179,7 +190,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""4e8d4dc5-4815-466f-b258-b50edfb67042"",
-                    ""path"": ""<Gamepad>/rightStick/y"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -190,7 +201,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""c511e101-d2a2-4064-b01d-f938bca176fb"",
-                    ""path"": ""<Gamepad>/rightStick/y"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
