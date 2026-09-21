@@ -107,7 +107,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""id"": ""c35c6fc2-0b27-43e2-b782-c102c849168a"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": """",
                     ""initialStateCheck"": true
                 },
                 {
@@ -168,7 +168,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b74c5e23-6f65-4f63-a9df-b0aac66fdf54"",
-                    ""path"": """",
+                    ""path"": ""<Gamepad>/leftStick/y"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
