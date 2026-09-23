@@ -452,7 +452,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38e0ddd0d7309c43b4447fd4e9ed456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraManager
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 465804678}
+  distance: 10
+  verticalOffset: 0
 --- !u!114 &372713999
 MonoBehaviour:
   m_ObjectHideFlags: 0
