@@ -53,14 +53,25 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.right * lateralSpeed * moveX * Time.deltaTime);
-        transform.Translate(Vector3.up * lateralSpeed * moveY * Time.deltaTime);
+        Rotacion();
+        MovePlayer();
+        
+    }
+   void Rotacion()
+    {
         transform.Rotate(Vector3.forward * rotation * rotationSpeed * Time.deltaTime * -360);
-        Vector3 vectorRotZ = Vector3.forward * maxRotationZ * moveX;
-        Vector3 vectorRotX = Vector3.right * maxRotationX * moveY;
+        Vector3 vectorRotZ = Vector3.forward * -maxRotationZ * moveX;
+        Vector3 vectorRotX = Vector3.right * -maxRotationX * moveY;
         Vector3 vectorRot = vectorRotX + vectorRotZ;
         currentRot = Vector3.SmoothDamp(currentRot, vectorRot, ref velocity, smoothTime);
         transform.eulerAngles = currentRot;
     }
-   
+    void MovePlayer()
+    {
+        transform.Translate(Vector3.right * lateralSpeed * moveX * Time.deltaTime, Space.World);
+        transform.Translate(Vector3.up * lateralSpeed * moveY * Time.deltaTime, Space.World);
+    }
+
+
+
 }
