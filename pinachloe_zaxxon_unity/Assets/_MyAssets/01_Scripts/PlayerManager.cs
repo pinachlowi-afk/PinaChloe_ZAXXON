@@ -57,8 +57,7 @@ public class PlayerManager : MonoBehaviour
     {
         Rotacion();
         MovePlayer();
-        CheckPosition(myLimit);
-        CheckPositionY(mylimity);
+       
     }
     void Rotacion()
     {
@@ -72,21 +71,29 @@ public class PlayerManager : MonoBehaviour
 
     void MovePlayer()
     {
-        transform.Translate(Vector3.right * lateralSpeed * moveX * Time.deltaTime, Space.World);
-        transform.Translate(Vector3.up * lateralSpeed * moveY * Time.deltaTime, Space.World);
+        if ( CheckPosition(myLimit) == true)
+        {
+            transform.Translate(Vector3.right * lateralSpeed * moveX * Time.deltaTime, Space.World);
+        }
+
+        if (CheckPositionY(mylimity) == true)
+        {
+
+            transform.Translate(Vector3.up * lateralSpeed * moveY * Time.deltaTime, Space.World);
+        }
     }
     bool CheckPosition(float myLimit)
     {
         bool inLimit;
         float posX = transform.position.x;
-        if (posX > myLimit)
+        if (posX > myLimit && moveX > 0)
         {
-            transform.position = new Vector3(myLimit, 0, 0);
+            //transform.position = new Vector3(myLimit, 0, 0);
             inLimit = false;
         }
-        else if (posX < -myLimit)
+        else if (posX > -myLimit && moveX < 0)
         {
-            transform.position = new Vector3(-myLimit, 0, 0);
+           //transform.position = new Vector3(-myLimit, 0, 0);
             inLimit = false;
         }
         else
@@ -102,14 +109,14 @@ public class PlayerManager : MonoBehaviour
     {
         bool inLimit;
         float posY = transform.position.y;
-        if (posY > myLimit)
+        if (posY > mylimity && moveY > 0)
         {
-            transform.position = new Vector3(0, -mylimity, 0);
+           // transform.position = new Vector3(0, -mylimity, 0);
             inLimit = false;
         }
-        else if (posY < -myLimit)
+        else if (posY < -mylimity && moveY < 0)
         {
-            transform.position = new Vector3(0, -mylimity, 0);
+           
             inLimit = false;
         }
         else
