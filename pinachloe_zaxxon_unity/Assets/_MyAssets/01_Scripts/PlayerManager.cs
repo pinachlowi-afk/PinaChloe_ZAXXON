@@ -91,7 +91,7 @@ public class PlayerManager : MonoBehaviour
             //transform.position = new Vector3(myLimit, 0, 0);
             inLimit = false;
         }
-        else if (posX > -myLimit && moveX < 0)
+        else if (posX < -myLimit && moveX < 0)
         {
            //transform.position = new Vector3(-myLimit, 0, 0);
             inLimit = false;
