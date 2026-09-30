@@ -34,6 +34,7 @@ public class PlayerManager : MonoBehaviour
     }
     private void Awake()
     {
+        speed = 100f;
         inputActions = new InputActions();
 
         inputActions.player.Shoot.started += _ => Shoot();
