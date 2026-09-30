@@ -803,10 +803,7 @@ MonoBehaviour:
   - {fileID: 312217539381649209, guid: 34294f6f825072c468507a85a5040264, type: 3}
   - {fileID: 7310294499437612878, guid: 1cb8ddf12d0ab814c9b5435bb2841dab, type: 3}
   interval: 0.5
-  limitX: 5
-  limitUp: 5
-  limitDown: 5
-  waves: 8
+  waves: 1
   playerManager: {fileID: 465804679}
 --- !u!4 &1613757632
 Transform:

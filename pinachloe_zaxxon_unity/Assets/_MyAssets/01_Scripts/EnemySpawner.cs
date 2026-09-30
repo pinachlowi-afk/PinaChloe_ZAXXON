@@ -8,15 +8,15 @@ public class EnemySpawner : MonoBehaviour
     //intervalo de tiempo para spawnear
     [SerializeField] float interval = 0.5f;
     // limites aleatorios de los ejes x e y
-    [SerializeField] float limitX = 15F;
-    [SerializeField] float limitUp = 15F;
-    [SerializeField] float limitDown = 15F;
+     float limitX = 5F;
+     float limitUp = 5F;
+     float limitDown = -5F;
 
     // enemigos intermedios distancia a la que sale el primer enemigo
     float firstenemyDistance;
     float distanceBetweenEnemies;
     //oleadas o bucles de enemigos, int es un num entero
-    [SerializeField] int waves;
+    [SerializeField] float waves;
     [SerializeField] PlayerManager playerManager;
 
 
@@ -65,10 +65,10 @@ public class EnemySpawner : MonoBehaviour
             distanceToFill -= distanceBetweenEnemies;
         }
     }
-    void SacarMeteoros(float distanceZ=0)
+    void SacarMeteoros(float distanceZ)
     {
         float randomX = Random.Range(-limitX, limitX);
-        float randomY = Random.Range(limitDown, limitDown);
+        float randomY = Random.Range(limitDown, limitUp);
         // instanciamos en posicion aleatoria en x e y pero en z donde esta el spawner
          Vector3 instPos = new Vector3(randomX, randomY,transform.position.z - distanceZ);
         int r = Random.Range(0, enemies.Length);

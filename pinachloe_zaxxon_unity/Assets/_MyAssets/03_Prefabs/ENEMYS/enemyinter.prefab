@@ -121,6 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6611803611012463791}
+  - component: {fileID: -7264692464434299316}
   m_Layer: 0
   m_Name: enemyinter
   m_TagString: Untagged
@@ -144,3 +145,17 @@ Transform:
   - {fileID: 152531885746195865}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7264692464434299316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310294499437612878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac8dfa222046cb4d9d4d8d9f44e5d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyManager
+  playerSpeed: 0
+  playerManager: {fileID: 0}

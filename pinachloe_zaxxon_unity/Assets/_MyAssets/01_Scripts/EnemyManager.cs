@@ -4,7 +4,8 @@ public class EnemyManager : MonoBehaviour
     
 {
     //LA VELOCIDAD DE MOVIMIENTO QUE LA OBTENDRA DEL JUGADOR
-    float speed;
+    float mySpeed;
+    [SerializeField] float playerSpeed;
     //componente del jugador
     [SerializeField] PlayerManager playerManager;
 
@@ -22,7 +23,11 @@ public class EnemyManager : MonoBehaviour
     void Update()
     {
         //me muevo a la velocidad del player
-        speed = playerManager.speed;
-        transform.Translate(Vector3.back * speed * Time.deltaTime);
+        playerSpeed = playerManager.speed + mySpeed;
+        transform.Translate(Vector3.back * playerSpeed * Time.deltaTime);
+        if (transform.position.z < -20)
+        {
+            Destroy(gameObject);
+        }
     }
 }
