@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7038093325156569440}
   - component: {fileID: -5948234499197921023}
+  - component: {fileID: 5511834538825348498}
   m_Layer: 0
   m_Name: enemyfirst
-  m_TagString: Untagged
+  m_TagString: cubo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +48,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyManager
   playerSpeed: 0
   playerManager: {fileID: 0}
+--- !u!65 &5511834538825348498
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312217539381649209}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6032697296954686435
 GameObject:
   m_ObjectHideFlags: 0

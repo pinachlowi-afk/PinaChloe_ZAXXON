@@ -8,9 +8,9 @@ public class EnemySpawner : MonoBehaviour
     //intervalo de tiempo para spawnear
     [SerializeField] float interval = 0.5f;
     // limites aleatorios de los ejes x e y
-     float limitX = 5F;
-     float limitUp = 5F;
-     float limitDown = -5F;
+     float limitX = 15F;
+     float limitUp = 15F;
+     float limitDown = -15F;
 
     // enemigos intermedios distancia a la que sale el primer enemigo
     float firstenemyDistance;
@@ -30,6 +30,9 @@ public class EnemySpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        distanceBetweenEnemies = 10f;
+        firstenemyDistance = 50f;
+
         StartCoroutine("SpawnEnemy");
         EnemigosIntermedios();
     }
